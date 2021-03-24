@@ -16,5 +16,31 @@ namespace NeoGamesCollectionCSharpDotNet
         {
             InitializeComponent();
         }
+
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(usernameTextBox.Text=="" || passwordTextBox.Text == "")
+            {
+                errorLabel.Visible = true;
+            } else
+            {
+                if(usernameTextBox.Text=="Gui" && passwordTextBox.Text == "123")
+                {
+                    MainAppForm mainAppForm = new MainAppForm();
+                    mainAppForm.Show();
+                    Close();
+                }
+            }
+        }
     }
 }
